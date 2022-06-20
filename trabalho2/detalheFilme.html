@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Cine</title>
+</head>
+<body>
+    <h1>Filme XPTO</h1>
+    <div class="container">
+        <div id="divDetalheFilme">
+            
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(location.search);
+        let id = params.get('id');
+
+        dadosFilmes = JSON.parse(localStorage.getItem('db_filmes'));
+        let idxFilme = dadosFilmes.results.findIndex ((elem) => elem.id == id);
+
+        if (idxFilme > -1) {
+            let filme = dadosFilmes.results[idxFilme];
+            document.getElementById('divDetalheFilme').innerHTML = `
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.tmdb.org/t/p/w500${filme.poster_path}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${filme.title}</h5>
+                        <p class="card-text">${filme.overview}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Avalição: ${filme.release_date}</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>`
+        } else {
+            alert("filme nao encontrado")
+        }
+
+        
+    </script>
+</body>
+</html>

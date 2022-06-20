@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Cine</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar cabecalho">
+            <div class="container-fluid">
+                <img class="navbar-brand" src="img/logo-removebg-preview.png" alt="logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation" onclick="pesquisaFilmes()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main class="filme">
+        <div class="row titulo">
+            <h1>Filmes Populares</h1>
+        </div>
+        <div class="container">
+            <div class="row tela" id="divListarFilmes">
+                <div class="col-4">
+                    <img src="https://picsum.photos/200/160" class="card-img-top" alt="Filme XPTO">
+                    <div class="card-body">
+                    <h5 class="card-title">Filme XTPO</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequatur recusandae, assumenda ea inventore facilis sequi accusantium dolorum doloribus officiis earum mollitia iste deserunt optio in saepe molestiae ipsum eius sunt ratione, explicabo quam officia possimus. Quae, dignissimos deserunt. Reiciendis!</p>
+                    <p class="avaliacao">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur sapiente sit praesentium rerum ad amet autem, debitis perspiciatis cupiditate in dignissimos! At velit, ipsa adipisci suscipit tenetur optio iusto quidem.</p>
+                    <p class="idioma">Idioma: BR</p>
+                    <a href="detalheFilme.html?id=550" class="btn btn-primary">Veja mais...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="col-12 footer_area">
+            © 2022 Copyright: Desenvolvimento de Interfaces Web -
+                <b>ICEI PUC MINAS</b>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
